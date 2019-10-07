@@ -29,6 +29,6 @@ class SecondViewController: UIViewController {
 
     @IBAction func sendDataBack(_ sender: Any) {
         delegate?.dataReceived(data: textField.text!)
-        dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 }
