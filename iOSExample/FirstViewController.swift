@@ -28,7 +28,7 @@ class FirstViewController: UIViewController, CanReceive {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "sendDataForwards" {
-            let secondVC = segue.destination as! SecondViewController
+            guard let secondVC = segue.destination as? SecondViewController else { return }
             secondVC.data = textField.text!
             secondVC.delegate = self
         }
